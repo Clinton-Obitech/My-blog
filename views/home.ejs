@@ -1,0 +1,59 @@
+<%- include("./partials/header") %>
+
+<main id="home">
+    <section id="hero">
+    <img src="hero-image.png">
+    <h1>
+       Share Your Voice.<br>
+       Discover New Stories.
+    </h1>
+    </section>
+    <section id="routes">
+        <a href="/register">Sign Up</a>
+        <a href="/login">Login</a>
+        <a class="view-blogs" href="/"><i class="fa-solid fa-newspaper"></i> View Blogs</a>
+    </section>
+    <section id="hero-text">
+    <h2>A dynamic blogging platform where anyone can sign up, create blogs and connect with ideas. Built to showcase my full-stack development skills.</h2>
+    </section>
+    <section id="features">
+
+        <h3 class="heading">Core Features</h3>
+        <div class="feature">
+
+            <h4><span><i class="fa-solid fa-lock"></i></span> User Authentication</h4>
+            <p>Secure sign-up and login.</p>
+
+        </div>
+        <div class="feature">
+
+            <h4> Create & Manage Blogs</h4>
+            <p>Users can add, edit, and delete posts.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <h4><i class="fa-solid fa-folder-open"></i> One-to-Many Relationship</h4>
+            <p>Each user owns multiple blogs.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <h4> <i class="fa-solid fa-database"></i> Dynamic Database Integration</h4>
+            <p>Powered by PostgreSQL</p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h4><i class="fa-solid fa-palette"></i> Custom Frontend styling</h4>
+            <p>Built with HTML, CSS, and Javascript<br> (no frameworks).</p>
+
+        </div>
+    </section>
+</main>
+
+<%-  include("./partials/footer")%>

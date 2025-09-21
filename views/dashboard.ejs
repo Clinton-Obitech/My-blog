@@ -1,0 +1,78 @@
+<%- include("partials/header.ejs") %>
+
+<main id="dashboard">
+
+    <section class="main-header">
+        <div class="dash">
+        <% if (userImage.image) {%>
+            <div>
+            <img src="/uploads/<%= userImage.image  %>">
+            <h2><%= user.username %>'s</h2>
+            </div>
+        <% } else { %>
+        <img id="dummy" src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png">
+        <h2><%= user.username %>'s</h2>
+            <% } %>
+        
+        
+        <h1>DASHBOARD</h1>
+        </div>
+        <div class="dash-settings">
+        <a href="/user/profile">
+            <i class="fa-solid fa-user"></i>
+        </a>
+        <a href="/logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+    </div>
+    </section>
+
+    <section class="create-link">
+    <a href="/create/blog">
+      <h5>Create Blog <i class="fa-solid fa-pen"></i></h5>
+    </a>
+    </section>
+
+    <% if (locals.userBlogs) {%>
+    <% userBlogs.forEach(blog => { %>
+    <p class="date"><i class="fa-solid fa-calendar"></i> <%= blog.created_at.toDateString() %></p>
+    <section id="blog">
+     <h2><%= blog.title %></h2>
+     <% if (blog.image) {%>
+     <img src="uploads/<%= blog.image %>">
+      <% } else { %>
+        <p id="no-img">No image</p>
+        <% } %>
+     <p><%= blog.content %></p>
+    </section>
+     <div class="blog-edit-delete">
+     <a href="user/blog/edit"><i class="fa-solid fa-pen-to-square"></i></a>
+     <form action="/user/blog/delete/?page=<%= currentPage %>" onsubmit="return confirm('Are you sure you want to delete post?')" method="POST">
+        <input type="hidden" name="id" value="<%= blog.id %>">
+        <button type="submit"><i class="fa-solid fa-trash"></i></button>
+     </form>
+     </div>
+      <% }) %>
+      <% } %>
+      <div class="pagination">
+
+        <% if (currentPage > 1) {%>
+            <a href="/dashboard?page=<%= currentPage - 1 %>"><i class="fa-solid fa-backward"></i></a>
+            <% } %>
+        <% for (let i = 1; i <= totalPages; i++) { %>
+        <a href="/dashboard?page=<%= i %>"><%= i %></a>
+        <% } %>
+
+        <% if (currentPage < totalPages) { %>
+        <a href="/dashboard?page=<%= currentPage + 1 %>"><i class="fa-solid fa-forward"></i></a>
+        <% } %>
+
+      </div>
+
+      <% if (locals.msg) {%>
+        <p class="dash-msg"><%= msg %></p>
+        <% } %>
+
+</main>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,30 @@
+<%- include("partials/header") %>
+
+<main id="profile">
+    <section id="profile-nav">
+     <a href="/dashboard"><i class="fa-solid fa-arrow-left"></i></a>
+     <a href="/edit/profile"><i class="fa-solid fa-user-pen"></i></a>
+     </section>
+
+    <section id="user-img">
+         <% if (userDetails.image) {%>
+            <img src="/uploads/<%= userDetails.image  %>">
+        <% } else { %>
+        <img src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png">
+            <% } %>
+        <h2><%= userDetails.username %></h2>
+        
+    </section>
+
+    <h2 class="heading">PROFILE</h2>
+    <section id="user-details">
+        <span>First Name</span><h3> <%= userDetails.firstname %></h3>
+        <span>Last Name</span><h3> <%= userDetails.lastname %></h3>
+        <span>Email</span><h3> <%= userDetails.email %></h3>
+        <span>Telephone</span><h3> <%= userDetails.tel %></h3>
+        <span>Address</span><h3> <%= userDetails.address %></h3>
+    </section>
+
+</main>
+
+<%- include("partials/footer.ejs") %>

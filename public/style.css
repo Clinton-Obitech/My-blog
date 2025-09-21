@@ -1,0 +1,718 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+html , body {
+    height: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #8AAA79;
+    padding: 1rem;
+}
+
+header a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+header h2 {
+    margin: 0;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 0.7rem;
+}
+
+header h2 i {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-size: 2rem;
+}
+
+header i {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.5rem;
+}
+
+main#terms i {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main section.main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+main section.main-header .dash {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main section.main-header .dash div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.2rem;
+    background-color: white;
+    margin: 0.2rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px black;
+    z-index: 5;
+}
+
+main section.main-header .dash-settings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main section.main-header .dash-settings a {
+   color: #000;
+   font-size: 1.3rem;
+   margin: 0 0.4rem;
+}
+
+main section.main-header h2 {
+   margin: 0 0.5rem 0;
+   font-family: sans-serif;
+   color: rgba(0, 0, 0, 0.8);
+   font-weight: bold;
+}
+
+main section.main-header h1 {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    margin-left: -1.5rem;
+    border-radius: 20px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+section.main-header .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+section.main-header .user h1 {
+    margin: 0 0.5rem;
+}
+
+section.main-header img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+}
+
+main section.create-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+}
+
+main#dashboard .dash-msg {
+    width: 90%;
+    height: 50vh;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0px 0px 5px #000;
+    border-radius: 5px;
+}
+
+main#dashboard p.dash-msg {
+    font-weight: bolder;
+    font-family: sans-serif;
+    line-height: 50vh;
+    color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 2rem;
+}
+
+main#dashboard section#blog {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+    width: 90%;
+    margin: auto;
+    padding: 0.2rem 0;
+    border-radius: 5px;
+}
+
+main#dashboard p.date {
+   margin: 1rem 1rem 0.2rem;
+   font-family: sans-serif;
+}
+
+main#dashboard .blog-edit-delete {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5rem 1rem;
+}
+
+main#dashboard .blog-edit-delete button {
+    border: none;
+    background-color: white;
+    margin-left: 0.3rem;
+}
+
+main#dashboard .blog-edit-delete button i {
+    color: red;
+}
+
+main#dashboard .blog-edit-delete a i {
+   color: blue;
+}
+
+main#dashboard .blog-edit-delete a {
+    text-decoration: none;
+    display: block;
+}
+
+main#dashboard .blog-edit-delete i {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+main#dashboard section#blog img {
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    display: block;
+    height:"300px";
+    object-fit: cover;
+}
+
+main#dashboard .pagination {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+main#dashboard .pagination a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main#dashboard .pagination i {
+    font-weight: 400;
+}
+
+main#dashboard section#blog h2 {
+    width: 95%;
+    margin: 0.2rem auto;
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 500;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+main#dashboard section#blog p {
+    color: rgba(0, 0, 0, 0.8);
+    width: 95%;
+    margin: 0.3rem auto;
+}
+
+main#create-blog .create-form form {
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main#create-blog .create-form input {
+    width: 100%;
+}
+
+main#create-blog .create-form h2 {
+    text-align: center;
+    margin: 1rem 0 0;
+    font-weight: bolder;
+}
+
+main#create-blog .create-form label {
+    padding: 0.2rem;
+    width: 15%;
+    margin: 1rem 0 0 0;
+    font-family: sans-serif;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+main#create-blog .create-form input[type=submit] {
+    margin: 0.5rem 0;
+    width: 50%;
+    padding: 0.5rem;
+    background-color: #8AAA79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px black;
+}
+
+main#create-blog .create-form textarea {
+    height: 200px;
+    border: 1.8px solid #8AAA79;
+    border-radius: 0 5px 5px 5px;
+    padding: 0.3rem;
+    font-size: 1rem;
+}
+
+main#create-blog .create-form input[type=text] {
+    width: 50%;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: 1.8px solid #8AAA79;
+    border-radius: 0 5px 5px 5px;
+}
+
+
+main#create-blog form a {
+    text-decoration: none;
+    background-color: #8AAA79;
+    padding: 0.5rem;
+    width: 50%;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 5px #000;
+    box-shadow: 0px 0px 5px #000;
+}
+
+main section.create-link a {
+    text-decoration: none;
+}
+
+
+main section.create-link h5 {
+    margin: 0 0.2rem 0 0.8rem;
+    border-radius: 3px;
+    color: #000;
+    font-family: sans-serif;
+    font-weight: bolder;
+    padding-left: 0.7rem;
+    font-weight: bolder;
+}
+
+main section.create-link h5 i {
+    border: 1.5px solid #8AAA79;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-shadow: none;
+    margin-left: 0.4rem;
+}
+
+main#profile #user-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+main#profile #dummy img {
+    border: 2px solid grey;
+}
+
+main#profile #user-img {
+    text-align: center;
+}
+
+main#profile #user-img h2 {
+    color: rgba(0, 0, 0, 0.8);
+    margin: 1rem;
+}
+
+main#profile h2.heading {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem;
+    display: inline-block;
+    color: white;
+    margin: 1rem;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+main#profile i {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main#profile #profile-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+main#edit-details .edit-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+main#edit-details i {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+main#edit-details a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main#profile #user-details h3 {
+    background-color: #8AAA79;
+    border-radius: 3px;
+    color: white;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5rem 0;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+
+main#profile #user-details span {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-shadow: none;
+    font-family: sans-serif;
+    border-radius: 3px;
+    color: white;
+    margin-right: 0.4rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+main#profile #user-details {
+    margin: auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 100px 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+main#edit-details form {
+   width: 95%;
+   margin: 1rem auto 0;
+   display: grid;
+   grid-template-columns: 20% 60%;
+   justify-content: center;
+   gap: 0.5rem;
+   text-align: center;
+}
+
+main#edit-details form button {
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  margin: 0.5rem 0;
+  background-color: #8AAA79;
+  border-radius: 5px;
+  text-shadow: 1px 1px 1px black;
+}
+
+main#edit-details form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border: 1.5px solid rgba(0, 0, 0, 0.9);
+    border-radius: 3px;
+}
+
+main#edit-details form label {
+    font-family: sans-serif;
+    background-color: white;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: white;
+    border-radius: 3px;
+    margin: 0.2rem 0;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+main#edit-details h2 {
+    margin: 0 1rem 0.3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    font-family: sans-serif;
+}
+
+main#login form {
+    width: 60%;
+    margin: auto;
+}
+
+main#login form input {
+    width: 100%;
+    border: 1.5px solid #8AAA79;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: 0 0 1rem;
+}
+
+main#login button {
+    padding: 1rem;
+    width: 100%;
+    background-color: #8AAA79;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px black;
+}
+
+main#login a {
+    display: block;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main#login h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+main#sign-up form {
+    width: 60%;
+    margin: auto;
+}
+
+main#sign-up form input {
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: 1.5px solid #8AAA79;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+main#sign-up form button {
+    padding: 1rem;
+    width: 100%;
+    background-color: #8AAA79;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border: none;
+    border-radius: 5px;
+}
+
+main#sign-up form label {
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+main#sign-up form a {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main#sign-up > a {
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    text-align: center;
+}
+
+main#sign-up form input[type=checkbox] {
+    width: initial;
+}
+
+main#sign-up h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+main#home section#features {
+    font-family: sans-serif;
+    width: 70%;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: auto;
+}
+
+main#home section#features .feature {
+    box-shadow: 0px 0px 2px black;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+main#home h3.heading {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    color: white;
+    border-radius: 3px;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px black;
+}
+
+main#home #hero {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 1.5rem auto;
+    align-items: center;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 4px;
+}
+
+main#home #routes {
+    display: grid; 
+    grid-template-columns: 50% 30%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+main#home #routes a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.5rem;
+    text-shadow: 1px 1px 1px black;
+    background-color: #8AAA79;
+}
+
+main#edit-details p {
+    font-family: sans-serif;
+    margin: 0.5rem;
+}
+
+main#home #routes a i {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 100;
+}
+
+main#create-blog p {
+    font-family: sans-serif;
+    margin: 0.5rem;
+}
+
+main#sign-up p {
+    font-family: sans-serif;
+    margin: 0.5rem;
+}
+
+main#home #routes a.view-blogs {
+    text-align: center;
+    grid-area: 1 / 1 / span 2 / 1;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 1rem 0.5rem;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: white;
+    text-shadow: none;
+    font-size: 1rem;
+}
+
+
+main#home #hero-text h2 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+main#home #hero-text {
+    margin: 1.5rem 0;
+}
+
+main#home #hero img {
+    height: 150px;
+    width: 250px;
+}
+
+main#home .feature p {
+    margin: 0.3rem 0;
+}
+
+main#home section#features i, span {
+    color: #8AAA79;
+    font-size: 1.5rem;
+    text-shadow: 0.5px 0.5px 1px black;
+}
+
+main#home section#features > div {
+    margin: 1rem;
+}
+
+main #blog p#no-img {
+    width: 95%;
+    text-align: center;
+    padding: 2rem 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #8AAA79;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    margin-top: 4rem;
+    border-bottom: 20px solid #8AAA79;
+}
+
+footer p {
+    margin: 0.5rem;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0.5rem;
+}

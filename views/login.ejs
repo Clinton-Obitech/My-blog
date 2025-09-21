@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+<main id="login">
+
+    <h1>LOGIN</h1>
+
+    <form action="login" method="POST">
+
+        <% if (locals.msg) { %>
+            <p><%= msg %></p>
+            <% } %>
+        <input type="text" name="username" id="username" placeholder="username" required>
+        <input type="password" name="password" id="password" placeholder="password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <a href="/register">Sign up</a>
+
+    <% if (locals.msg) {%>
+        <p> <%= msg %></p>
+        <% } %>
+</main>
