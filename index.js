@@ -9,6 +9,7 @@ import { Strategy } from "passport-local";
 import multer from "multer";
 import fs from "fs";
 import path from "path";
+import pgSession from "connect-pg-simple";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -45,10 +46,18 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 app.use(
     session({
+        store: new pgSession({
+            db: db,
+            tableName: "session"
+        }),
         secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: true,
-        cookie: {maxAge: 1000 * 60 * 60}
+        cookie: {
+            maxAge: 1000 * 60 * 60,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax"
+        }
     })
 );
 
